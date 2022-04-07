@@ -138,7 +138,7 @@ def to_ConvSoftMax( name, s_filer=40, offset="(0,0,0)", to="(0,0,0)", width=1, h
     {Box={
         name=""" + name +""",
         caption="""+ caption +""",
-        zlabel="""+ str(s_filer) +""",
+        xlabel={{ """+ str(s_filer) + """, }},
         fill=\SoftmaxColor,
         height="""+ str(height) +""",
         width="""+ str(width) +""",
@@ -184,10 +184,10 @@ def to_connection( of, to):
 \draw [connection]  ("""+of+"""-east)    -- node {\midarrow} ("""+to+"""-west);
 """
 
-def to_skip( of, to, pos=1.25):
+def to_skip( of, to, pos=1.25, pos2=1.25):
     return r"""
 \path ("""+ of +"""-southeast) -- ("""+ of +"""-northeast) coordinate[pos="""+ str(pos) +"""] ("""+ of +"""-top) ;
-\path ("""+ to +"""-south)  -- ("""+ to +"""-north)  coordinate[pos="""+ str(pos) +"""] ("""+ to +"""-top) ;
+\path ("""+ to +"""-south)  -- ("""+ to +"""-north)  coordinate[pos="""+ str(pos2) +"""] ("""+ to +"""-top) ;
 \draw [copyconnection]  ("""+of+"""-northeast)  
 -- node {\copymidarrow}("""+of+"""-top)
 -- node {\copymidarrow}("""+to+"""-top)
