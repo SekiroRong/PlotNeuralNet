@@ -20,7 +20,7 @@ arch = [
 #     to_SoftMax( name='b3', s_filer='', offset="(8,0,0)", to="(0,0,0)", width=2, height=40, depth=40, caption="Rotate Angle" ),
 #     to_SoftMax( name='b4', s_filer='', offset="(12,0,0)", to="(0,0,0)", width=2, height=40, depth=40, caption="Dimension" ),
 #     to_SoftMax( name='b5', s_filer='', offset="(16,0,0)", to="(0,0,0)", width=2, height=40, depth=40, caption="Height" ),
-    to_Sum( name='sum6', offset="(2,0,0)", to="(1,0,0)", radius=1, opacity=0.6),
+    to_Plus( name='sum6', offset="(2,0,0)", to="(1,0,0)", radius=1, opacity=0.6),
     to_end()
     ]
 
